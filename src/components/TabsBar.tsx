@@ -65,7 +65,6 @@ function TabsBar() {
 
 
 
-
   return (
 <Tabs isFitted variant='enclosed'>
   <TabList>
@@ -75,7 +74,7 @@ function TabsBar() {
     {categories?.map(cat => <Tab key={cat}
     onClick={() => handleClick(cat)}
     
-    >{cat}</Tab>)}
+    >{cat.toUpperCase()}</Tab>)}
   </TabList>
 
   <TabPanels>
