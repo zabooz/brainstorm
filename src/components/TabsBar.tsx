@@ -1,4 +1,4 @@
-import { Box, Image, StepIcon, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react"
+import { Box, Image, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import apiClients from "../services/api-clients"
 
