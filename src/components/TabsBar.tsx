@@ -18,7 +18,7 @@ function TabsBar() {
     const [categories,setCategories] = useState<string[]>([])
     const [category,setCategory] = useState<string>('animal')
     const [joke,setJoke] = useState<string>('')
-
+    const [newJoke,setNewJoke] = useState<boolean>(false)
 
     useEffect(() => {
   
@@ -52,12 +52,13 @@ function TabsBar() {
   
           
   
-    },[category])
+    },[category,newJoke])
 
 
 
     const handleClick = (category:string) => {
         setCategory(category)
+        setNewJoke(!newJoke)
     }
 
 
