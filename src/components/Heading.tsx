@@ -10,7 +10,6 @@ interface Props{
 function Header({title}: Props) {
   return (
     <Heading
-        colorScheme='whiteAlpha'
         size='4xl'
         textAlign='center'
         my={10}
