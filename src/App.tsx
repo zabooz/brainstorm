@@ -2,11 +2,10 @@
 
 import { Box } from '@chakra-ui/react'
 import './App.css'
-import ChuckNorris from './components/ChuckNorris'
 import Header from './components/Heading'
 import TabsBar from './components/TabsBar'
-
-
+import { apiData } from './Data/apiData' 
+import FactSection from './components/FactSection'
 
 
 
@@ -15,7 +14,7 @@ function App() {
   const headerTitle = 'BrainStorming'
 
   const features = {
-    chuckNorris:'Chuck Norris Jokes',
+    title:'Facts & Wisdom'
   }
 
 
@@ -27,9 +26,8 @@ function App() {
     <TabsBar
       features ={features}
     />
-    <ChuckNorris
-    title={features.chuckNorris}
-    
+    <FactSection
+    data={apiData}
     />
     </Box>
   
