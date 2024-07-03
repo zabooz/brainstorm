@@ -44,7 +44,7 @@ function RandomFacts({ data }: Props) {
         <Box>
           <Image
             src={data.picture}
-            width='100%'
+            width='300px'
             height={{
                 base:'300px'
             }}
@@ -58,7 +58,7 @@ function RandomFacts({ data }: Props) {
         fontSize={18}
         
         >{message}</Text>
-        <Button onClick={() => setNewMessage(!newMessage)}>Gimme More</Button>
+        <Button onClick={() => setNewMessage(!newMessage)}>More {data.name}</Button>
       </VStack>
     </>
   );
