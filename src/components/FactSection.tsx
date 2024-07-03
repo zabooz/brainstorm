@@ -11,10 +11,10 @@ interface Props {
 export default function FactSection({ data }: Props) {
   return (
     <SimpleGrid columns={{
-      sm:1,
-      md:3
+      md:1,
+      lg:3
     }}
-    spacing={5}>
+    spacing={20}>
       <RandomFacts
       data={data.donaldTrump}
       />

@@ -37,14 +37,19 @@ function RandomFacts({ data }: Props) {
     <>
       <VStack>
         <Heading fontSize={{
-        lg:'30px',
-        md:'25px',
-        sm:'30px'
+        xl:'30px',
+        lg:'25px',
+        md:'30px',
+        base:'25px'
         }} className={styles.headingPrimary}>{data.title}</Heading>
         <Box>
           <Image
             src={data.picture}
-            width='300px'
+            width={{
+              base:'300px',
+              md:'400px',
+              sm:'400px',
+            }}
             height={{
                 base:'300px'
             }}
@@ -52,11 +57,17 @@ function RandomFacts({ data }: Props) {
           />
         </Box>
         <Text
-        width='70%'
         textAlign='center'
         my={5}
-        fontSize={18}
-        
+        fontSize={16}
+        width={{
+          sm: '50%',
+          md:'70%'
+        }}
+        height={{
+          base:'120px',
+          sm:'100%',
+        }}
         >{message}</Text>
         <Button onClick={() => setNewMessage(!newMessage)}>More {data.name}</Button>
       </VStack>
