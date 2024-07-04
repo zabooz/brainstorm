@@ -65,14 +65,5 @@ export  const apiData: ApiData = {
         url : 'https://swapi.dev/api/',
         picture:starWars,
     },
-    test:{
-        category:'test',
-        name:'test',
-        title:'test',
-        url:'picture',
-        picture:'string'
-
-
-    }
     
 }

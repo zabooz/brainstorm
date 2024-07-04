@@ -15,7 +15,7 @@ function TabsBar({ features, scrollView, hrefs }: Props) {
 
   return (
     <Breadcrumb
-      my={10}
+      m={10}
       fontSize={32}
       style={{
         position: "sticky",
@@ -33,8 +33,7 @@ function TabsBar({ features, scrollView, hrefs }: Props) {
               href={key}
               onClick={(e) => {
                 e.preventDefault();
-
-                scrollView(hrefs[index]);
+                scrollView(hrefs[index+1]);
               }}
             >
               {value}

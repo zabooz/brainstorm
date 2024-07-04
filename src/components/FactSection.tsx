@@ -5,12 +5,12 @@ import { DataObject } from "../Data/apiData";
 import RandomFacts from "./RandomFacts";
 import { forwardRef } from "react";
 
+
 interface Props {
   data: DataObject;
-  ref: any
 }
 
-const  FactSection= forwardRef<HTMLDivElement,Props> (({ data},ref ) => {
+const  FactSection= forwardRef<HTMLHeadingElement, Props>(({ data }, ref) => {
 
   const {donaldTrump,chuckNorris,wisdom} = data
 

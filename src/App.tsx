@@ -22,7 +22,7 @@ function App() {
   const {pokedex,starWars} = apiData
 
   useEffect(() => {
-    const newFeatures: Features = { ...features };
+    const newFeatures: Features = { ...features};
 
     for (let key in apiData) {
       if (!newFeatures[key]) {
@@ -34,14 +34,14 @@ function App() {
     setFeatures(newFeatures);
   }, []); 
 
-  const factsRef = useRef(null)
-  const pokemonRef = useRef(null)
-  const starwarsRef = useRef(null)
-  const topRef = useRef(null)
+  const factsRef = useRef<HTMLHeadingElement>(null)
+  const pokemonRef = useRef<HTMLHeadingElement>(null)
+  const starWarsRef = useRef<HTMLHeadingElement>(null)
+  const topRef = useRef<HTMLHeadingElement>(null)
 
+  console.log(features)
 
-
-  const hrefs = [topRef,factsRef,pokemonRef,starwarsRef]
+  const hrefs = [topRef,factsRef,pokemonRef,starWarsRef]
 
   const scrollToElement = (ref:any) => {
 
@@ -72,9 +72,10 @@ function App() {
     />
     <Divider/>
     <Starwars
-    ref={starwarsRef}
+    ref={starWarsRef}
     data ={starWars}
     />
+    <Divider mb={2000}/>
     </Box>
   
   )

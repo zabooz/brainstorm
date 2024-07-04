@@ -55,7 +55,7 @@ interface ListResponse{
 }
 
 
-const Pokedex = forwardRef<HTMLDivElement,Props> (({data},ref) => {
+const Pokedex = forwardRef<HTMLHeadingElement,Props> (({data},ref) => {
 
   const apiClient = createAxiosInstance(data.url)
   const [pokemonList,setPokemonList] = useState<Pokemon[]>([])

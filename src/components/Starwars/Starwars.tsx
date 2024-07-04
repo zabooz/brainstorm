@@ -4,12 +4,11 @@ import { forwardRef } from 'react'
 
 interface Props{
     data:Data
-    ref:any
+
 }
 
 
-const  Starwars = forwardRef<HTMLDivElement,Props>(({data},ref)=> {
-
+const  Starwars = forwardRef<HTMLHeadingElement,Props>(({data},ref)=> {
   return (
     <>
     <Heading ref={ref}
