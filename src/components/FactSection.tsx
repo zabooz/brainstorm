@@ -17,12 +17,19 @@ const  FactSection= forwardRef<HTMLDivElement,Props> (({ data},ref ) => {
 
   return (
     <>
-    <Heading ref={ref}>Facts & Wisdom</Heading>
+    <Heading ref={ref} my={20}
+    textAlign='center'
+    >Facts & Wisdom</Heading>
     <SimpleGrid columns={{
       md:1,
       lg:3
     }}
-    spacing={20}>
+    spacing={{
+      '2xl':0,
+      base : '80px',
+      md:'40px'
+    }}
+    >
       <RandomFacts
       data={donaldTrump}
       />

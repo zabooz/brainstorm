@@ -12,7 +12,12 @@ const  Starwars = forwardRef<HTMLDivElement,Props>(({data},ref)=> {
 
   return (
     <>
-    <Heading ref={ref} >{data.name}</Heading>
+    <Heading ref={ref}
+    
+    textAlign='center'
+    my={10}
+    
+    >{data.name}</Heading>
     <Box>
         <Image src={data.picture}  />
     </Box>

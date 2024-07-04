@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Data } from "../Data/apiData";
 import createAxiosInstance from "../services/api-clients";
-import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, GridItem, Heading, Image, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import styles from "../css/style.module.css";
+
 
 interface Props {
   data: Data;
@@ -42,35 +43,58 @@ function RandomFacts({ data }: Props) {
         md:'30px',
         base:'25px'
         }} className={styles.headingPrimary}>{data.title}</Heading>
-        <Box>
+        <SimpleGrid
+        columns={{
+          '2xl': 2,
+          base:1
+
+        }}
+        justifyContent='center'
+        alignContent='center'
+        >
+        <GridItem>
+        <Box
+        overflow='hidden'
+        borderRadius={5}
+        display='flex'
+        justifyContent='center'
+        >
           <Image
             src={data.picture}
-            width={{
-              base:'300px',
-            }}
             height={{
-                base:'380px'
+              base:'380px'
             }}
             objectFit="cover"
-          />
+            />
         </Box>
-        <Text
-        textAlign='center'
-        my={5}
-        fontSize={16}
-        width={{
-          sm: '50%',
-          md:'70%'
-        }}
-        height={{
-          base:'120px',
-          sm:'100%',
-        }}
-        >{message}</Text>
-        <Button 
-        padding={3}
-        
-        onClick={() => setNewMessage(!newMessage)}>More {data.name}</Button>
+        </GridItem>
+        <GridItem
+        display="flex"
+        flexDirection="column"
+        justifyContent='space-between'
+        alignItems="center"
+        textAlign="center"
+        my={3}
+
+        >
+          
+          <Text
+          textAlign='center'
+          my={5}
+          fontSize={16}
+          width={{
+            sm: '50%',
+            md:'70%'
+          }}
+          >{message}
+          </Text>
+          <Button
+          padding={3}
+          my={3}
+          onClick={() => setNewMessage(!newMessage)}>More {data.name}
+          </Button>
+        </GridItem>
+        </SimpleGrid>
       </VStack>
     </>
   );

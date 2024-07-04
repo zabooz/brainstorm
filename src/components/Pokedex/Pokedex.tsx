@@ -98,9 +98,14 @@ const Pokedex = forwardRef<HTMLDivElement,Props> (({data},ref) => {
     <Grid templateAreas={`'display'
                           'navBar'
                            pokeFeature`}
+    
+    my={10}
+    
     >
        <GridItem>
-        <Heading my={10} ref={ref} >{data.name}</Heading>
+        <Heading my={10} ref={ref} 
+        textAlign='center'
+        >{data.name}</Heading>
        </GridItem>
        <GridItem>
         <NavBar
